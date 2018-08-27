@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <style>
+        .update,
+        #id,
+        .addUser {
+            display: none;
+        }
+
+        #submitBtn,
+        #updateBtn,
+        .btns {
+            margin: 0 1rem 1rem
+        }
+
+        #addPostBtn {
+            margin: 0 1rem 1rem 2rem
+        }
+
+        .btns {
+            transform: translate(0, 1rem);
+        }
+
+        .sortId,
+        .sortPostId,
+        .sortUserId,
+        .sortBody {
+            cursor: s-resize;
+        }
+    </style>
+    <title>Comment Page</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="nav--BAR">
+            <!--Navbar-->
+            <nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./users.html">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./posts.html">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./comments.html">Comments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./categories.html">Category</a>
+                        </li>
+
+                    </ul>
+                    <!-- Links -->
+
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+            <!--/.Navbar-->
+
+        </div>
+        <div class="row">
+            <button id="addPostBtn" class="btn btn-flat waves-effect btn-outline-success mt-4 hideShowBtn">Add Comment</button>
+        </div>
+
+        <div class="row addUser theHiddenTable ">
+            <input type="number" id="id" placeholder="id" class="input-group mb-3">
+            <div class="input-group m-3 col-10 col-sm-8 col-lg-4">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Post ID</span>
+                </div>
+                <input type="number" id="postId" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group m-3 col-10 col-sm-8 col-lg-4">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">User ID</span>
+                </div>
+                <input type="number" id="userId" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group m-3 col-10 col-sm-8 col-lg-4">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Body</span>
+                </div>
+                <textarea type="text" id="body" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" rows="5"></textarea>
+            </div>
+            <div class="btns">
+                <button id="submitBtn" class="btn btn-flat waves-effect btn-outline-success  ">Submit</button>
+                <button id="updateBtn" class="btn btn-flat waves-effect btn-outline-success  update">Update</button>
+
+            </div>
+        </div>
+
+
+        <!-- here is the display table --------------------------------------------->
+        <!-- here is the display table --------------------------------------------->
+        <!-- here is the display table --------------------------------------------->
+        <!-- here is the display table --------------------------------------------->
+        <!-- here is the display table --------------------------------------------->
+
+
+        <div class="row table-responsive col-12 m-0">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width: 6%" class="sortId" scope="col">ID</th>
+                        <th style="width: 7%" class="sortPostId" scope="col">Post ID</th>
+                        <th style="width: 7%" class="sortUserId" scope="col">User ID</th>
+                        <th style="width: 50%" class="sortBody" scope="col">Body</th>
+                        <th style="width: 30%" scope="col" colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/comments.js"></script>
+
+</body>
+
+</html>
