@@ -1,16 +1,11 @@
 $(document).ready(function () {
-
-
     $('.hideShowBtn').on('click', () => {
         $('.addUser').show(450);
         $('.hideShowBtn').hide(150);
         $('#updateBtn').hide(150);
         $('#submitBtn').show(150);
         notify();
-
-
     })
-
     let url = "http://localhost:3000/users"
 
     function notify() {
@@ -23,7 +18,6 @@ $(document).ready(function () {
 
     function getDataToTable() {
         $.get(url, null, (data, req) => {
-
             const tbody = $("table tbody");
             data.forEach((el, i) => {
                 let urlId = url + '/' + el.id;
@@ -36,7 +30,6 @@ $(document).ready(function () {
                         data: {
                             _method: 'delete'
                         },
-
                     });
                     tr.remove();
                 }
@@ -87,20 +80,16 @@ $(document).ready(function () {
                 data,
                 success: function (data) {
                     notify();
-
-
                 },
             });
             $('.addUser').show();
-
-
         }
 
     });
+
     // Update button
     $('#updateBtn').on('click', () => {
         if (!$('#name').val() == "" && !$('#email').val() == "") {
-
             $.ajax({
                 url: url + '/' + $('#id').val(),
                 type: 'PUT',
@@ -119,9 +108,9 @@ $(document).ready(function () {
             })
 
         }
-
     })
 
+    // Table sort function
     $('.sortId').on('click', () => {
         url = "http://localhost:3000/users?_sort=id&_order=asc ";
         notify()

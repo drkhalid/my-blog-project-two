@@ -1,15 +1,10 @@
 $(document).ready(function () {
-
-
     $('.hideShowBtn').on('click', () => {
         $('.addUser').show(450);
         $('.hideShowBtn').hide(150);
         $('#updateBtn').hide(150);
         $('#submitBtn').show(150);
         notify();
-
-
-
     })
 
     let url = "http://localhost:3000/categories"
@@ -36,11 +31,9 @@ $(document).ready(function () {
                         data: {
                             _method: 'delete'
                         },
-
                     });
                     tr.remove();
                 }
-
                 const tr = $('<tr class="addedTr ">').append([
                     $('<td>').html(el.id),
                     $('<td>').html(el.name),
@@ -53,7 +46,6 @@ $(document).ready(function () {
 
                         $('#id').val(el.id);
                         $('#category').val(el.name);
-
                     })),
                     $('<td>').html($('<button class="btn btn-flat waves-effect btn-outline-danger">').html('Delete').on('click', () => {
                         $('#updateBtn').hide(150);
@@ -81,25 +73,20 @@ $(document).ready(function () {
                 data,
                 success: function (data) {
                     notify();
-
-
                 },
             });
             $('.addUser').show();
         }
-
     });
+
     // Update button
     $('#updateBtn').on('click', () => {
         if (!$('#category').val() == "") {
-
             $.ajax({
                 url: url + '/' + $('#id').val(),
                 type: 'PUT',
                 data: {
-                    name: $('#category').val(),
-
-
+                    name: $('#category').val()
                 },
                 success: function (data) {
                     notify();
@@ -107,13 +94,13 @@ $(document).ready(function () {
                     $('#submitBtn').show(450);
                     $('.addUser').hide(450);
                     $('.hideShowBtn').show(450)
-
                 }
             })
-
         }
 
     })
+
+    // table sort functions
     $('.sortId').on('click', () => {
         url = "http://localhost:3000/categories?_sort=id&_order=asc ";
         notify()

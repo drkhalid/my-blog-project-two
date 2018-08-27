@@ -9,7 +9,6 @@ $(document).ready(function () {
   let url = "http://localhost:3000/posts";
 
   function notify() {
-
     $(".addedTr").remove();
     $("#id").val("");
     $("#userId").val("");
@@ -32,12 +31,9 @@ $(document).ready(function () {
             data: {
               _method: 'delete'
             },
-
           });
           tr.remove();
-
         }
-
         const tr = $('<tr class="addedTr ">').append([
           $("<td>").html(el.id),
           $("<td>").html(el.userId),
@@ -105,7 +101,6 @@ $(document).ready(function () {
   });
   // Update button      
   $("#updateBtn").on("click", () => {
-
     if (!$("#userId").val() == "" &&
       !$("#title").val() == "" &&
       !$("#body").val() == "" &&
@@ -131,7 +126,7 @@ $(document).ready(function () {
     }
   });
 
-
+  // Table sort function
   $('.sortId').on('click', () => {
     url = "http://localhost:3000/posts?_sort=id&_order=asc ";
     notify()

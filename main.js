@@ -23,7 +23,6 @@ $(document).ready(function nanana() {
                     })
                 })
                 $.get(urlComments, null, (comments, req) => {
-
                     for (const comment of comments) {
                         $(`.commentCard${i}`)
                         $.get('http://localhost:3000/users', null, (users, req) => {
@@ -33,7 +32,6 @@ $(document).ready(function nanana() {
                                         $(`<h5>`).html(`${user1.name} says:`),
                                         $(`<p>`).html(`${comment.body}`)
                                     ]));
-
                                 }
                                 let commetApear = false
                                 $(`.commentCard${i}`).hide()
@@ -46,10 +44,6 @@ $(document).ready(function nanana() {
                                         commetApear = false
                                     }
                                 })
-
-
-
-
                             }
                         })
                     }
@@ -58,7 +52,6 @@ $(document).ready(function nanana() {
                 const urlPostId = url + '/' + data[i].id
 
                 function deleteFuncHome() {
-
                     $.ajax({
                         type: "DELETE",
                         url: urlPostId,
@@ -108,9 +101,7 @@ $(document).ready(function nanana() {
                             $(`<h3 class="btn col-6 col-lg-2 col-md-3 btn-flat waves-effect btn-outline-info commentTile${i}">Comments</h3>`),
                             $(`<div class="commentCard${i}">`)
                         ])
-
                     ]))
-
                 cards.append(card)
             }
         })
@@ -128,8 +119,6 @@ $(document).ready(function nanana() {
             $(`<h3 style="text-align: center; margin-top: 1rem">`).html(`Categories`),
             $(`<div class="catBtn">`).append($(`<button class="btn btn-flat waves-effect btn-outline-info col-12 mt-3 mb-3">`).append($(`<div class="allCats">`).append($(`<h4>All Categories</h4>`))))
         ])
-
-
         $.get(urlCat, null, (data, req) => {
             data.forEach((cats, i) => {
                 const cat = $('<div class="catBtn">').append($(`<button class="btn btn-flat waves-effect btn-outline-info col-12 mt-3 mb-3">`)
@@ -138,7 +127,6 @@ $(document).ready(function nanana() {
                         $('.addedCard').remove();
                         dataToCard();
                     })));
-
                 catBoard.append(cat);
             });
         });
@@ -156,11 +144,10 @@ $(document).ready(function nanana() {
     $('#submitBtn').on('click', () => {
         $('.addedCard').remove();
         dataToCard();
-
     });
+
     $('#updateBtn').on('click', () => {
         $('.addedCard').remove();
-
         if (!$("#userId").val() == "" &&
             !$("#title").val() == "" &&
             !$("#body").val() == ""

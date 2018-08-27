@@ -1,15 +1,10 @@
 $(document).ready(function () {
-
-
     $('.hideShowBtn').on('click', () => {
         $('.addUser').show(450);
         $('.hideShowBtn').hide(150);
         $('#updateBtn').hide(150);
         $('#submitBtn').show(150);
         notify();
-
-
-
     })
 
     let url = "http://localhost:3000/comments"
@@ -25,7 +20,6 @@ $(document).ready(function () {
 
     function getDataToTable() {
         $.get(url, null, (data, req) => {
-
             const tbody = $("table tbody");
             data.forEach((el, i) => {
                 let urlId = url + '/' + el.id;
@@ -37,11 +31,9 @@ $(document).ready(function () {
                         data: {
                             _method: 'delete'
                         },
-
                     });
                     tr.remove();
                 }
-
                 const tr = $('<tr class="addedTr ">').append([
                     $('<td>').html(el.id),
                     $('<td>').html(el.postId),
@@ -58,7 +50,6 @@ $(document).ready(function () {
                         $('#postId').val(el.postId);
                         $('#userId').val(el.userId);
                         $('#body').val(el.body);
-
                     })),
                     $('<td>').html($('<button class="btn btn-flat waves-effect btn-outline-danger">').html('Delete').on('click', () => {
                         $('#updateBtn').hide(150);
@@ -88,8 +79,6 @@ $(document).ready(function () {
                 data,
                 success: function (data) {
                     notify();
-
-
                 },
             });
             $('.addUser').show();
@@ -99,7 +88,6 @@ $(document).ready(function () {
     // Update button
     $('#updateBtn').on('click', () => {
         if (!$('#postId').val() == "" && !$('#body').val() == "" && !$('#userId').val() == "") {
-
             $.ajax({
                 url: url + '/' + $('#id').val(),
                 type: 'PUT',
@@ -107,8 +95,6 @@ $(document).ready(function () {
                     postId: $('#postId').val(),
                     userId: $('#userId').val(),
                     body: $('#body').val(),
-
-
                 },
                 success: function (data) {
                     notify();
@@ -116,13 +102,13 @@ $(document).ready(function () {
                     $('#submitBtn').show(450);
                     $('.addUser').hide(450);
                     $('.hideShowBtn').show(450)
-
                 }
             })
-
         }
 
     })
+
+    // Table sort function
     $('.sortId').on('click', () => {
         url = "http://localhost:3000/comments?_sort=id&_order=asc ";
         notify()
