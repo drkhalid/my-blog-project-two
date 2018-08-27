@@ -118,14 +118,20 @@ $(document).ready(function nanana() {
     dataToCard()
 
 
+
+
     // Get the categories to its place 
     function getCat() {
         const urlCat = 'http://localhost:3000/categories'
+        const catBoard = $(".category");
+        catBoard.append([
+            $(`<h3 style="text-align: center; margin-top: 1rem">`).html(`Categories`),
+            $(`<div class="catBtn">`).append($(`<button class="btn btn-flat waves-effect btn-outline-info col-12 mt-3 mb-3">`).append($(`<div class="allCats">`).append($(`<h4>All Categories</h4>`))))
+        ])
+
 
         $.get(urlCat, null, (data, req) => {
-            const catBoard = $(".category");
             data.forEach((cats, i) => {
-                // const cat = $('<div>').append($('<h4>').html(cats.name));
                 const cat = $('<div class="catBtn">').append($(`<button class="btn btn-flat waves-effect btn-outline-info col-12 mt-3 mb-3">`)
                     .append($(`<div>`).html(`<h4>${cats.name}</h4>`).on('click', () => {
                         urlByCat = `http://localhost:3000/categories/${i +1}/posts`;
