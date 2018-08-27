@@ -1,0 +1,91 @@
+{
+  "posts": [
+    {
+      "userId": "2",
+      "categoryId": "2",
+      "title": "My friend is khalid",
+      "body": "Where's tha bin. Will 'e 'eckerslike mardy bum bobbar. Face like a slapped arse soft lad dahn t'coil oil eeh wacken thi\nsen up soft southern pansy. Bobbar michael palin ah'll gi' thee a thick ear ne'ermind aye. Breadcake soft southern pansy\ntha daft apeth. Any rooad that's champion wacken thi sen up wacken thi sen up nay lad ah'll learn thi. God's own county nah\nthen ne'ermind will 'e 'eckerslike ee by gum. Eeh appens as maybe appens as maybe ne'ermind. Th'art nesh thee is that thine\nbe reet ee by gum. Sup wi' 'im shurrup.",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "categoryId": "1",
+      "title": "Guillain–Barré syndrome",
+      "body": "Where's tha bin. Will 'e 'eckerslike mardy bum bobbar. Face like a slapped arse soft lad dahn t'coil oil eeh wacken thi\nsen up soft southern pansy. Bobbar michael palin ah'll gi' thee a thick ear ne'ermind aye. Breadcake soft southern pansy\ntha daft apeth. Any rooad that's champion wacken thi sen up wacken thi sen up nay lad ah'll learn thi. God's own county nah\nthen ne'ermind will 'e 'eckerslike ee by gum. Eeh appens as maybe appens as maybe ne'ermind. Th'art nesh thee is that thine\nbe reet ee by gum. Sup wi' 'im shurrup.",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "userId": "3",
+      "categoryId": "1",
+      "title": "My asterakani zanko",
+      "body": "Where's tha bin. Will 'e 'eckerslike mardy bum bobbar. Face like a slapped arse soft lad dahn t'coil oil eeh wacken thi\nsen up soft southern pansy. Bobbar michael palin ah'll gi' thee a thick ear ne'ermind aye. Breadcake soft southern pansy\ntha daft apeth. Any rooad that's champion wacken thi sen up wacken thi sen up nay lad ah'll learn thi. God's own county nah\nthen ne'ermind will 'e 'eckerslike ee by gum. Eeh appens as maybe appens as maybe ne'ermind. Th'art nesh thee is that thine\nbe reet ee by gum. Sup wi' 'im shurrup."
+    },
+    {
+      "id": 4,
+      "userId": "1",
+      "categoryId": "1",
+      "title": "Down syndrome",
+      "body": "Where's tha bin. Will 'e 'eckerslike mardy bum bobbar. Face like a slapped arse soft lad dahn t'coil oil eeh wacken thi\nsen up soft southern pansy. Bobbar michael palin ah'll gi' thee a thick ear ne'ermind aye. Breadcake soft southern pansy\ntha daft apeth. Any rooad that's champion wacken thi sen up wacken thi sen up nay lad ah'll learn thi. God's own county nah\nthen ne'ermind will 'e 'eckerslike ee by gum. Eeh appens as maybe appens as maybe ne'ermind. Th'art nesh thee is that thine\nbe reet ee by gum. Sup wi' 'im shurrup."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": "1",
+      "userId": "1",
+      "body": "im khalid i love you \nLorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga numquam facilis quibusdam corrupti ad? Harum omnis vitae magnam\nperferendis nesciunt, deserunt facere aliquid? "
+    },
+    {
+      "postId": "2",
+      "userId": "2",
+      "body": "Im Ahmed \nLorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga numquam facilis quibusdam corrupti ad? Harum omnis vitae magnam\nperferendis nesciunt, deserunt facere aliquid? ",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "postId": "2",
+      "userId": "3",
+      "body": "im subhani you did great \nLorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga numquam facilis quibusdam corrupti ad? Harum omnis vitae magnam\nperferendis nesciunt, deserunt facere aliquid? "
+    },
+    {
+      "postId": "3",
+      "userId": "1",
+      "body": "im khalid well done subhani\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga numquam facilis quibusdam corrupti ad? Harum omnis vitae magnam\nperferendis nesciunt, deserunt facere aliquid? ",
+      "id": 4
+    },
+    {
+      "postId": "3",
+      "userId": "2",
+      "body": "im Ahmed nice\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga numquam facilis quibusdam corrupti ad? Harum omnis vitae magnam\nperferendis nesciunt, deserunt facere aliquid? ",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Khalid Jamal",
+      "email": "kh.jamal95@gmail.com"
+    },
+    {
+      "name": "Ahmed Waled",
+      "email": "kh.za.95@gmail.com",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Subhani Ayob",
+      "email": "subhanya96@gmail.com"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Medical"
+    },
+    {
+      "id": 2,
+      "name": "Social"
+    }
+  ]
+}
